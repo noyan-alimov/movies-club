@@ -13,8 +13,6 @@ const deleteMovie = async (req, res, client) => {
             success: true,
             data: req.params.id
         });
-
-        await client.close();
     } catch (error) {
         console.log('Error deleting a movie: ', error);
 

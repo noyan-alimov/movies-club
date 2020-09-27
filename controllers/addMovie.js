@@ -11,8 +11,6 @@ const addMovie = async (req, res, client) => {
             success: true,
             data: movie
         });
-
-        await client.close();
     } catch (error) {
         console.log('Error with post request add movie: ', error);
 

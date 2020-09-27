@@ -10,8 +10,6 @@ const getMovies = async (req, res, client) => {
             success: true,
             data: movies
         });
-
-        await client.close();
     } catch (error) {
         console.log('Error with get request all movies: ', error);
 
