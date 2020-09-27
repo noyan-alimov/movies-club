@@ -6,6 +6,7 @@ const jwtCheck = require('./auth0.utils');
 const getMovies = require('./controllers/getMovies');
 const addMovie = require('./controllers/addMovie');
 const deleteMovie = require('./controllers/deleteMovie');
+const addUser = require('./controllers/addUser');
 
 const app = express();
 
@@ -23,6 +24,10 @@ app.post('/add-movie', jwtCheck, (req, res) => {
 app.delete('/delete-movie/:id', jwtCheck, (req, res) => {
     deleteMovie(req, res, client);
 });
+
+app.post('/add-user', (req, res) => {
+    addUser(req, res, client);
+})
 
 const port = 8000;
 app.listen(port, () => {
