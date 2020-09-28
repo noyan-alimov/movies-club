@@ -20,7 +20,7 @@ app.post('/add-movie', jwtCheck, (req, res) => {
     addMovie(req, res, client);
 });
 
-app.delete('/delete-movie/:id', jwtCheck, (req, res) => {
+app.delete('/delete-movie', jwtCheck, (req, res) => {
     deleteMovie(req, res, client);
 });
 
