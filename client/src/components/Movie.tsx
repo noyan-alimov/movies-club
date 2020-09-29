@@ -19,7 +19,7 @@ const Movie: FunctionComponent<Props> = (props) => {
             scope: '',
         });
 
-        await fetch('http://localhost:8000/delete-movie', {
+        await fetch('/delete-movie', {
             method: 'delete',
             headers: { 
                 Authorization: `Bearer ${accessToken}`,

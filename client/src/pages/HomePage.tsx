@@ -15,7 +15,7 @@ const HomePage: FunctionComponent = () => {
     });
 
     const getMovies = async () => {
-        const res = await fetch('http://localhost:8000/get-movies');
+        const res = await fetch('/get-movies');
         const data = await res.json();
         setState({ loading: false, movies: data.data });
     }
