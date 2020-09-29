@@ -5,3 +5,4 @@ Basic app built with:
 - Express
 - MongoDB
 - Auth0
+- React
