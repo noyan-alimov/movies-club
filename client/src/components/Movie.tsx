@@ -19,7 +19,7 @@ const Movie: FunctionComponent<Props> = (props) => {
             scope: '',
         });
 
-        await fetch('/delete-movie', {
+        await fetch(`${process.env.REACT_APP_API_URL}/delete-movie`, {
             method: 'delete',
             headers: { 
                 Authorization: `Bearer ${accessToken}`,

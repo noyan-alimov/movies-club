@@ -15,7 +15,7 @@ const HomePage: FunctionComponent = () => {
     });
 
     const getMovies = async () => {
-        const res = await fetch('/get-movies');
+        const res = await fetch(`${process.env.REACT_APP_API_URL}/get-movies`);
         const data = await res.json();
         setState({ loading: false, movies: data.data });
     }

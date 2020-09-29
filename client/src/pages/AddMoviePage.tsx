@@ -32,7 +32,7 @@ const AddMoviePage: FunctionComponent = () => {
             scope: '',
         });
 
-        await fetch('/add-movie', {
+        await fetch(`${process.env.REACT_APP_API_URL}/add-movie`, {
             method: 'post',
             headers: {
                 Authorization: `Bearer ${accessToken}`,

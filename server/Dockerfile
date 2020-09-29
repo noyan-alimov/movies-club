@@ -5,8 +5,6 @@ WORKDIR /app
 COPY . /app/
 
 RUN yarn install
-RUN cd client && yarn install
-RUN cd client && yarn build
 
 EXPOSE 8000
 
